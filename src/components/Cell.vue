@@ -20,7 +20,7 @@ defineEmits<{
       connected: isConnected,
       target: isTarget,
       wrong: isWrong,
-      hidden: isHidden && !isConnected,
+      hidden: isHidden && !isConnected && !isWrong && !isTarget,
       start: isStart && !isConnected,
     }"
     @click="$emit('click')"
