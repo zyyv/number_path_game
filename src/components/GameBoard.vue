@@ -184,6 +184,8 @@ async function handleCellClick(row: number, col: number) {
 
   const cell = board.value.getCell(row, col);
 
+  if (!gameStarted.value && cell.number !== currentStep.value) return;
+
   if (cell.number === currentStep.value) {
     moveCount.value++;
 
